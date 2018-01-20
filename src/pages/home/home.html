@@ -1,24 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Search
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
+<ion-content >
+
   <ion-list>
     <ion-item>
-    <ion-input type="text" placeholder="Enter your search..." [formControl]="textInput" ></ion-input>   
-  </ion-item>
+      <ion-input type="text" placeholder="Enter your search in this input field..." [formControl]="textInput"></ion-input>
+    </ion-item>
   </ion-list>
- 
 
- <ion-list>
-   <ion-item *ngFor="let item of listItems">
-     {{item}}
-   </ion-item>
- </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of filteredItems">
+      {{item}}
+    </ion-item>
+  </ion-list>
 </ion-content>
- 
